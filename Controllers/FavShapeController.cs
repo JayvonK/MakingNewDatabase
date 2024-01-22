@@ -21,4 +21,6 @@ public class FavShapeController : ControllerBase
     {
         return _shapes.GetData();
     }
+
+    [HttpPost]
 }
