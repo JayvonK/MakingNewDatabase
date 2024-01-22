@@ -24,4 +24,9 @@ public class FavShapeController : ControllerBase
 
     [HttpPost]
     [Route("AddNameAndFavShape/{name}/{shape}")]
+
+    public string AddFavShape(string name, string shape)
+    {
+        return _shapes.InputShape(name, shape);
+    }
 }
