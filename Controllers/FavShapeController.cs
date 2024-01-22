@@ -23,4 +23,5 @@ public class FavShapeController : ControllerBase
     }
 
     [HttpPost]
+    [Route]
 }
