@@ -19,6 +19,6 @@ public class FavShapeController : ControllerBase
     [Route("AddNameAndFavShape")]
     public List<Shapes> GetData()
     {
-        
+        return _shapes.GetData();
     }
 }
