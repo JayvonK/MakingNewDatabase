@@ -4,5 +4,6 @@ namespace MakingNewDatabase.Services;
 
     public interface IShapesService
     {
-        List<Shapes> InputShape(string name, string shape);
+        List<Shapes> GetData();
+        string InputShape(string name, string shape);
     }

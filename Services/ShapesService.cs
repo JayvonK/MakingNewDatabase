@@ -12,14 +12,19 @@ public class ShapesService : IShapesService
         _db = db;
     }
 
-    public List<Shapes> InputShape(string name, string shape)
+    public List<Shapes> GetData()
+    {
+        return _db.Shapes.ToList();
+    }
+
+    public string InputShape(string name, string shape)
     {
         Shapes s = new();
         s.Name = name;
-        s.ShapeName = shape;
+        s.FavShape = shape;
         _db.Shapes.Add(s);
         _db.SaveChanges();
 
-        return _db.Shapes.ToList();
+        return $"Your name is {name} and your favorite shape is {shape}";
     }
 }
