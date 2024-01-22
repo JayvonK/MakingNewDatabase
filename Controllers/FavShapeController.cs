@@ -16,12 +16,12 @@ public class FavShapeController : ControllerBase
     }
 
     [HttpGet]
-    [Route("AddNameAndFavShape")]
+    [Route("GetData")]
     public List<Shapes> GetData()
     {
         return _shapes.GetData();
     }
 
     [HttpPost]
-    [Route]
+    [Route("AddNameAndFavShape/{name}/{shape}")]
 }
