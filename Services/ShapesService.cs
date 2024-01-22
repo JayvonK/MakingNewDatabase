@@ -25,6 +25,6 @@ public class ShapesService : IShapesService
         _db.Shapes.Add(s);
         _db.SaveChanges();
 
-        return $"Your name is {name} and your favorite shape is {shape}";
+        return $"Your name is {name} and your favorite shape is a {shape}";
     }
 }
