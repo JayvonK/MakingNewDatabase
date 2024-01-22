@@ -1,3 +1,4 @@
+using MakingNewDatabase.Models;
 using MakingNewDatabase.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,4 +17,8 @@ public class FavShapeController : ControllerBase
 
     [HttpGet]
     [Route("AddNameAndFavShape")]
+    public List<Shapes> GetData()
+    {
+        
+    }
 }
