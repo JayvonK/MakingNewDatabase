@@ -1,12 +1,25 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using MakingNewDatabase.Data;
+using MakingNewDatabase.Models;
 
-namespace MakingNewDatabase.Services
+namespace MakingNewDatabase.Services;
+
+public class ShapesService : IShapesService
 {
-    public class ShapesService
+    private readonly DataContext _db;
+
+    public ShapesService(DataContext db)
     {
-        
+        _db = db;
+    }
+
+    public List<Shapes> InputShape(string name, string shape)
+    {
+        Shapes s = new();
+        s.Name = name;
+        s.ShapeName = shape;
+        _db.Shapes.Add(s);
+        _db.SaveChanges();
+
+        return _db.Shapes.ToList();
     }
 }
